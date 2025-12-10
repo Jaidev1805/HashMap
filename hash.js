@@ -179,7 +179,8 @@ class HashMap {
     }
 }
 
-const test = new HashMap()
+const test = new HashMap();
+
 test.set('apple', 'red')
 test.set('banana', 'yellow')
 test.set('carrot', 'orange')
@@ -192,5 +193,16 @@ test.set('ice cream', 'white')
 test.set('jacket', 'blue')
 test.set('kite', 'pink')
 test.set('lion', 'golden')
-test.clear()
-console.log(test.length())
+
+console.log({ "length": test.length() });
+
+test.set('lion', 'brown');
+test.set('apple', 'red');
+console.log({ "length": test.length() });
+
+test.set('moon', 'silver');
+console.log(test.capacity);
+console.log(test.values());
+
+console.log(test.clear());
+console.log({ "length": test.length() });
